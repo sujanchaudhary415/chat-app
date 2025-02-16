@@ -4,14 +4,15 @@ import { IoMdSettings } from "react-icons/io";
 import { FaRegUser } from "react-icons/fa";
 import { CiLogout } from "react-icons/ci";
 import { useAuthStore } from "./../store/useAuthStore";
+import { Link } from "react-router-dom";
 const Navbar = () => {
   const { authUser,logout } = useAuthStore();
   return (
     <div className="w-full flex items-center justify-between text-[#CBAD8D] font-bold text-md">
-      <div className="flex items-center gap-2">
+      <Link to="/" className="flex items-center gap-2">
         <FiMessageSquare className="text-2xl " />
         <h1 className="font-semibold ">Chatty</h1>
-      </div>
+      </Link>
 
       <div className="flex items-center justify-between gap-3">
         <div className="flex items-center gap-2">
@@ -23,7 +24,7 @@ const Navbar = () => {
           <>
             <div className="flex items-center gap-2">
               <FaRegUser className="text-xl" />
-              <h1 className="font-semibold ">Profile</h1>
+              <Link to="/profile" className="font-semibold ">Profile</Link>
             </div>
 
             <div className="flex items-center gap-2">
