@@ -15,21 +15,21 @@ const Navbar = () => {
       </Link>
 
       <div className="flex items-center justify-between gap-3">
-        <div className="flex items-center gap-2">
+        <Link to="/setting" className="flex items-center gap-2">
           <IoMdSettings className="text-xl" />
-          <h1 className="font-semibold ">Settings</h1>
-        </div>
+          <h1 className="font-semibold hidden sm:block">Settings</h1>
+        </Link>
 
         {authUser && (
           <>
             <div className="flex items-center gap-2">
               <FaRegUser className="text-xl" />
-              <Link to="/profile" className="font-semibold ">Profile</Link>
+              <Link to="/profile" className="font-semibold hidden  sm:block">Profile</Link>
             </div>
 
-            <div className="flex items-center gap-2">
-              <CiLogout onClick={logout} className="text-xl" />
-              <h1 className="font-semibold ">Logout</h1>
+            <div  className="flex items-center gap-2">
+              <CiLogout onClick={logout}  className="text-xl" />
+              <h1  className="font-semibold hidden sm:block">Logout</h1>
             </div>
           </>
         )}

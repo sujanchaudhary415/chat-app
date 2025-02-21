@@ -6,7 +6,9 @@ import { useAuthStore } from "./../store/useAuthStore";
 const ProfilePage = () => {
   const { authUser,updateProfile } = useAuthStore();
   const [selectedImage, setSelectedImage] = useState(null);
-
+  
+ 
+  
   const handleImageUpload = (e) => {
     const file = e.target.files[0];
     if (!file) {
