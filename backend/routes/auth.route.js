@@ -17,6 +17,7 @@ authRouter.post(
   signup
 );
 
+
 authRouter.post(
   "/login",
   body("email").isEmail().withMessage("Email must be valid"),
